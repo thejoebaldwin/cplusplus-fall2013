@@ -7,6 +7,6 @@ Code from C++ class at FVTC
 
 ##This is a subheader
 
--great thing 1
--great thing 2
--great thing 3
+- great thing 1
+- great thing 2
+- great thing 3
