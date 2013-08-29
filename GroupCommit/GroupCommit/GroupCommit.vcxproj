@@ -62,8 +62,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="aragorn55.cpp" />
+    <ClCompile Include="bakerr08.cpp" />
+    <ClCompile Include="Hairahcez.cpp" />
+    <ClCompile Include="jeffkoss.cpp" />
+    <ClCompile Include="JessicaHall.cpp" />
+    <ClCompile Include="joerythor.cpp" />
+    <ClCompile Include="JoshWegerer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="nmilk2115.cpp" />
     <ClCompile Include="thejoebaldwin.cpp" />
+    <ClCompile Include="tprince-swartout.cpp" />
+    <ClCompile Include="wegnerd.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
