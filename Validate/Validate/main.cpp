@@ -22,13 +22,12 @@ int main()
 	cout << "Please enter a value:";
 	cin >> user_value;
 	
+	//call isNumeric before calling convertToInt
 	if (isNumeric(user_value))
 	{
 		cout << "success";
-
 		int user_number = convertToInt(user_value);
 		cout << "You entered " << user_number << endl;
-
 	}
 	else
 	{
@@ -42,13 +41,18 @@ int main()
 
 int convertToInt(string s)
 {
+	//holds running total
 	int total = 0;
+	//start at 10 ^ 0
+	//	track exponent separate from index i
 	int exp = 0;
+	//loop through word, start at end
 	for (int i = s.length() - 1; i >= 0; i--)
 	{
 		char c = s[i];
-	
+		//temporary value for 1s, 10s, 100s, etc.
 		int value = 0;
+		//translate character to integer value
 		if (c == '0')
 		{
 			value = 0;
@@ -89,22 +93,28 @@ int convertToInt(string s)
 		{
 			value = 9;
 		}
-        
-		
+		//add the current value times it's place (1s, 10s, 100s, etc) to the
+		//	running total
+		//	use pow(10 ^ 0) instead of (10 ^ 1)
+		//	pow(10 ^ 0) = 1 DOES NOT EQUAL (10 ^ 0) = 10
 		total +=  (value * pow(10, exp));
+		//increment exponent for following iteration
 		exp++;
 	}
 	return total;
 }
 
 
+//returns true if string is numeric value
 bool isNumeric(string s)
 {
-	int total = 0;
 	bool success = false;
+	//start at end of string (1's place).
 	for (int i = s.length() - 1; i >= 0; i--)
 	{
+		//get the digit
 		char c = s[i];
+		//look for characters 0-9
 		if (c == '0')
 		{
 			success = true;
@@ -147,6 +157,7 @@ bool isNumeric(string s)
 		}
 		else
 		{
+			//if 0-9 not found then set success to false and break from for loop
 			success = false;
 			break;
 		}
@@ -154,6 +165,9 @@ bool isNumeric(string s)
 	return success;
 }
 
+
+
+//code used to demo cin.fail(), cin.clear(), cin.ignore()
 void validate()
 {
 	int test1, test2;
