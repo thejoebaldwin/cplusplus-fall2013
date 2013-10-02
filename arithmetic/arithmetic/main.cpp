@@ -1,21 +1,16 @@
 #include <iostream>
 #include <conio.h>
 #include <iomanip>
-//need for shell color on windows machine
-#include <Windows.h>
-#include "Helper.h"
 #include <string>
+#include "Helper.h"
 
 using namespace std;
 
-//need to declare (but not define) before use
-void setConsole();
-bool dummy();
-
 int main()
 {
-	setConsole();
+	
 	Helper h = Helper();
+	h.SetConsole();
 	bool keep_looping = true;
 
 	while(keep_looping)
@@ -34,68 +29,54 @@ int main()
 		{
 			if (h.IsNumericInt(option))
 			{
-				int num_one;
-				int num_two;
-				int num_answer;
+				int num_option = h.ConvertToInt(option);				
+				if (num_option == 1 || num_option == 2)
+				{
+				int num_one, num_two, num_answer;
+				string input_one, input_two;
 				//ask for the numeric inputs
 				cout << "First Number? ";
-				cin >> num_one;
+				cin >> input_one;
 				cout << "Second Number? ";
-				cin >> num_two;
-
-				int num_option = h.ConvertToInt(option);
-
-				switch (num_option)
+				cin >> input_two;
+				if (h.IsNumericInt(input_one) && h.IsNumericInt(input_two))
 				{
-					case 1:
-						//addition
-						num_answer = num_one + num_two;
-						cout << "The answer is:" << num_answer << endl;
-						break;
-					case 2:
-						//multiplication
-						num_answer = num_one * num_two;
-						cout << "The answer is:" << num_answer << endl;
-						break;
-					default:
-						cout << "Please select an existing menu option" << endl;
+					num_one = h.ConvertToInt(input_one);
+					num_two = h.ConvertToInt(input_two);
+					switch (num_option)
+					{
+						case 1:
+							//addition
+							num_answer = num_one + num_two;
+							cout << "The answer is:" << num_answer << endl;
+							break;
+						case 2:
+							//multiplication
+							num_answer = num_one * num_two;
+							cout << "The answer is:" << num_answer << endl;
+							break;
+					}
+				}
+				else
+				{
+					cout << "Please enter an exiting menu option" << endl;
 				}
 				
-			}
+		}
 			else
 			{
 				cout << "Please enter a valid number!" << endl;
 			}
+				}
+				else
+				{
+					cout << "Please enter valid numbers" << endl;
+				}
 		}
 	}
-      	
 	
 	cout << "Goodbye!";
 	_getch();
 	return 0;
 }
 
-bool dummy()
-{
-	return false;
-}
-
-void setConsole()
-{
-	 //color value for console
-	int color = 25;  
-	//console reference	
-	HANDLE	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	//this will loop until either 0 is entered, or a non-numeric value
-
-   	PCONSOLE_FONT_INFOEX font = new CONSOLE_FONT_INFOEX();
-   	font->cbSize = sizeof(CONSOLE_FONT_INFOEX);
-   
-    	//CONSOLE_FONT_INFOEX is defined in some windows header
-    	GetCurrentConsoleFontEx(hConsole, false, font);
-	//PCONSOLE_FONT_INFOEX is the same as CONSOLE_FONT_INFOEX*
-    	font->dwFontSize.X = 10;
-    	font->dwFontSize.Y = 18;
-	SetCurrentConsoleFontEx(hConsole, false, font);
-	SetConsoleTextAttribute(hConsole, 240); 
-}

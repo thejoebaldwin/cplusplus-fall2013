@@ -1,5 +1,8 @@
 #include <iostream>
 #include <conio.h>
+//need for shell color on windows machine
+#include <Windows.h>
+
 using namespace std;
 
 
@@ -13,6 +16,7 @@ class Helper
 		bool IsNumericInt(string);
 		int ConvertToInt(string);
 		double ConvertToDouble(string);
+		void SetConsole();
 
 };
 

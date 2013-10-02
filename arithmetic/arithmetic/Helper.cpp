@@ -229,3 +229,26 @@ bool Helper::IsNumeric(string s)
 	}
 	return success;
 }
+
+
+
+
+void Helper::SetConsole()
+{
+	 //color value for console
+	int color = 25;  
+	//console reference	
+	HANDLE	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	PCONSOLE_FONT_INFOEX font = new CONSOLE_FONT_INFOEX();
+   	font->cbSize = sizeof(CONSOLE_FONT_INFOEX);
+   
+    //CONSOLE_FONT_INFOEX is defined in windows header
+	GetCurrentConsoleFontEx(hConsole, false, font);
+	
+	//PCONSOLE_FONT_INFOEX is the same as CONSOLE_FONT_INFOEX*
+    font->dwFontSize.X = 10;
+    font->dwFontSize.Y = 18;
+	SetCurrentConsoleFontEx(hConsole, false, font);
+	SetConsoleTextAttribute(hConsole, 240); 
+}
