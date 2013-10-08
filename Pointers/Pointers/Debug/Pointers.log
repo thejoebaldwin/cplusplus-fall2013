@@ -1,0 +1,16 @@
+﻿Build started 10/8/2013 9:45:22 AM.
+     1>Project "C:\Users\baldwinj\Desktop\Pointers\Pointers\Pointers.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\baldwinj\desktop\pointers\pointers\main.cpp(24): error C2440: '=' : cannot convert from 'int' to 'int *'
+                 Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+     1>c:\users\baldwinj\desktop\pointers\pointers\main.cpp(34): error C2556: 'void growByOne(int *,int)' : overloaded function differs only by return type from 'int growByOne(int *,int)'
+                 c:\users\baldwinj\desktop\pointers\pointers\main.cpp(7) : see declaration of 'growByOne'
+     1>c:\users\baldwinj\desktop\pointers\pointers\main.cpp(34): error C2371: 'growByOne' : redefinition; different basic types
+                 c:\users\baldwinj\desktop\pointers\pointers\main.cpp(7) : see declaration of 'growByOne'
+     1>Done Building Project "C:\Users\baldwinj\Desktop\Pointers\Pointers\Pointers.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.53
