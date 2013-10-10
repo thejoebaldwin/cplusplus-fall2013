@@ -10,6 +10,7 @@ double Helper::ConvertToDouble(string s)
   //holds running total
 	double total = 0;
 	bool decimal_point_found = false;
+	bool is_negative = false;
 	int exp = s.length() - 1;
 
 	//test if contains decimal point first
@@ -33,7 +34,11 @@ double Helper::ConvertToDouble(string s)
 		//temporary value for 1s, 10s, 100s, etc.
 		int value = 0;
 		//translate character to integer value
-		if (c == '0')
+		if (c == '-')
+		{
+			is_negative = true;
+		}
+		else if (c == '0')
 		{
 			value = 0;
 		}
@@ -91,6 +96,10 @@ double Helper::ConvertToDouble(string s)
 		}
 		
 	}
+	if (is_negative)
+	{
+		total *= -1;
+	}
 	return total;
 
 }
@@ -102,6 +111,7 @@ int Helper::ConvertToInt(string s)
 	//start at 10 ^ 0
 	//	track exponent separate from index i
 	int exp = 0;
+	bool is_negative = false;
 	//loop through word, start at end
 	for (int i = s.length() - 1; i >= 0; i--)
 	{
@@ -109,7 +119,11 @@ int Helper::ConvertToInt(string s)
 		//temporary value for 1s, 10s, 100s, etc.
 		int value = 0;
 		//translate character to integer value
-		if (c == '0')
+		if (c == '-')
+		{
+			is_negative = true;
+		}
+		else if (c == '0')
 		{
 			value = 0;
 		}
@@ -157,6 +171,11 @@ int Helper::ConvertToInt(string s)
 		//increment exponent for following iteration
 		exp++;
 	}
+	
+	if (is_negative)
+	{
+		total *= -1;
+	}
 	return total;
 }
 
@@ -173,6 +192,13 @@ bool Helper::IsNumericInt(string s)
 			|| c == '5' || c == '6' || c == '7' || c == '8' || c == '9')
 		{
 			success = true;
+		}
+		else if (c == '-')
+		{
+			if (i > 0)
+			{
+				success = false;
+			}
 		}
 		else
 		{
@@ -213,6 +239,13 @@ bool Helper::IsNumeric(string s)
 			}
 			//if decimal is at end of string not valid number
 			if (i == s.length() - 1)
+			{
+				success = false;
+			}
+		}
+		else if (c == '-')
+		{
+			if (i > 0)
 			{
 				success = false;
 			}

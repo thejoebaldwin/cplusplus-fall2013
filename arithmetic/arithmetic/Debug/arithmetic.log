@@ -1,11 +1,11 @@
-﻿Build started 10/2/2013 9:39:29 AM.
+﻿Build started 10/10/2013 10:29:51 AM.
      1>Project "C:\Users\baldwinj\Desktop\cplusplus-fall2013\arithmetic\arithmetic\arithmetic.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Helper.cpp
          Helper.cpp
-     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(16): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(30): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(17): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\baldwinj\desktop\cplusplus-fall2013\arithmetic\arithmetic\helper.cpp(170): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\baldwinj\Desktop\cplusplus-fall2013\arithmetic\Debug\arithmetic.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\baldwinj\Desktop\cplusplus-fall2013\arithmetic\Debug\arithmetic.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\baldwinj\Desktop\cplusplus-fall2013\arithmetic\Debug\arithmetic.lib" /MACHINE:X86 Debug\Helper.obj
          Debug\main.obj
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.38
+Time Elapsed 00:00:01.46
