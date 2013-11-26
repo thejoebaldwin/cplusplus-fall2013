@@ -1,13 +1,35 @@
-﻿Build started 11/21/2013 9:45:40 AM.
-     1>Project "\\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Wrapper\Wrapper.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/26/2013 9:11:29 AM.
+     1>Project "C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Wrapper\Wrapper.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
+     1>c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\collection.h(21): warning C4812: obsolete declaration style: please use 'Collection<T>::Collection' instead
+     1>c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\collection.h(27): warning C4812: obsolete declaration style: please use 'Collection<T>::Collection' instead
+     1>c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\collection.h(27): warning C4812: obsolete declaration style: please use 'Collection<T>::Collection' instead
+                 with
+                 [
+                     T=double
+                 ]
+                 c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\collection.h(28) : while compiling class template member function 'Collection<T>::Collection(int)'
+                 with
+                 [
+                     T=double
+                 ]
+                 c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\main.cpp(9) : see reference to function template instantiation 'Collection<T>::Collection(int)' being compiled
+                 with
+                 [
+                     T=double
+                 ]
+                 c:\users\500137632\desktop\github\cplusplus-fall2013\wrapper\wrapper\main.cpp(9) : see reference to class template instantiation 'Collection<T>' being compiled
+                 with
+                 [
+                     T=double
+                 ]
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Debug\Wrapper.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Debug\Wrapper.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Debug\Wrapper.lib" /MACHINE:X86 Debug\main.obj
-         Wrapper.vcxproj -> \\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Debug\Wrapper.exe
-     1>Done Building Project "\\appdata7.fvtc.edu\userdata$\baldwinj\my documents\visual studio 2012\Projects\Wrapper\Wrapper\Wrapper.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Debug\Wrapper.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Debug\Wrapper.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Debug\Wrapper.lib" /MACHINE:X86 Debug\main.obj
+         Wrapper.vcxproj -> C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Debug\Wrapper.exe
+     1>Done Building Project "C:\Users\500137632\Desktop\GitHub\cplusplus-fall2013\Wrapper\Wrapper\Wrapper.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.57
+Time Elapsed 00:00:00.86

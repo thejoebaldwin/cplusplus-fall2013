@@ -1,44 +1,49 @@
 #include <iostream>
 using namespace std;
 
+template <class T>
 class Collection
 {
 private:
-	int* array_;
+	T* array_;
 	int length_;
 
 public:
 	Collection();
 	Collection(int);
 	int length();
-	int& operator[](int);
-	friend ostream& operator<<(ostream&, Collection&);
-    void add(int);
+	T& operator[](int);
+	//friend ostream& operator<<(ostream&, Collection<T>&);
+    void add(T);
 };
 
-Collection::Collection()
+template <class T>
+Collection<T>::Collection<T>()
 {
 	Collection(1);
 }
 
-Collection::Collection(int length)
+template <class T>
+Collection<T>::Collection<T>(int length)
 {
 	length_ = length;
-	array_ = new int[length_];
+	array_ = new T[length_];
 }
 
-int Collection::length()
+template <class T>
+int Collection<T>::length()
 {
 	return length_;
 }
 
-int& Collection::operator[] (int index)
+template <class T>
+T& Collection<T>::operator[] (int index)
 {
 	return array_[index];
 }
 
-
-ostream& operator<<(ostream &out, Collection &c)
+template <class T>
+ostream& operator<<(ostream &out, Collection<T> &c)
 {
  out << "Length:" << c.length() << endl;
  for (int i = 0; i < c.length(); i++)
@@ -48,19 +53,20 @@ ostream& operator<<(ostream &out, Collection &c)
  return out;
 }
 
-void Collection::add(int num)
+template <class T>
+void Collection<T>::add(T value)
 {
 	//declare new array length + 1
-	int* new_array = new int[length_ + 1];
+	T* new_array = new T[length_ + 1];
 	//copy old array values to new array
 	for (int i = 0; i < length_; i++)
 	{
 		new_array[i] = array_[i];
 	}
 	length_++;
-	new_array[length_ - 1] = num;
+	new_array[length_ - 1] = value;
 	//**free up old array_ memory**
 	delete[] array_;
-	//set array_ pointer to new array
+	//set array_ poTer to new array
 	array_ = new_array;
 }

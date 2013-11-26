@@ -6,12 +6,12 @@ using namespace std;
 
 int main()
 {
-	Collection c(0);
-	c[0]= 22;
-	c.add(99);
-	c.add(77);
-	c.add(66);
-	c.add(200);
+	Collection<double> c(0);
+	//c[0]= 22;
+	c.add(12.34);
+	c.add(56.78);
+	c.add(91.01);
+	c.add(234.56);
 	
 	cout << c << endl;
 
